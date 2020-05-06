@@ -1,0 +1,56 @@
+!!com.compuware.ispw.cli.model.IspwRoot
+ispwApplication:
+  application: TXXX
+  host: TestDrive
+  pathMappings:
+  - path: \AMAC
+    types:
+    - fileExtension: amac
+      ispwType: ASM
+  - path: \C
+    types:
+    - fileExtension: c
+      ispwType: C
+  - path: \CLST
+    types:
+    - fileExtension: clst
+      ispwType: CLST
+  - path: \COB
+    types:
+    - fileExtension: cbl
+      ispwType: WAI
+  - path: \H
+    types:
+    - fileExtension: h
+      ispwType: H
+  - path: \LINK
+    types:
+    - fileExtension: txt
+      ispwType: SRPC
+  - path: \COPY
+    types:
+    - fileExtension: cpy
+      ispwType: DCL
+  - path: \ASM
+    types:
+    - fileExtension: amac
+      ispwType: ASM
+  - path: \INCL
+    types:
+    - fileExtension: incl
+      ispwType: INCL
+  - path: \JOB
+    types:
+    - fileExtension: jcl
+      ispwType: JOB
+  - path: \PLI
+    types:
+    - fileExtension: pli
+      ispwType: PLI
+  - path: \LKED
+    types:
+    - fileExtension: txt
+      ispwType: SRPC
+  port: 16196
+  runtimeConfig: ISP8
+  stream: CWEZ
