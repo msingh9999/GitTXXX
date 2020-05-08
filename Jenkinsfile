@@ -6,20 +6,9 @@ node {
   }
 
   stage('Git to ISPW Synchronization')
-  { 
-	/* Original
-	gitToIspwIntegration app: 'PLAY', 
-	branchMapping: '''*Play* => DEV1, per-branch''', 
-	connectionId: '9079999f-ab78-4047-8366-00eb8aa4f173', 
-	credentialsId: 'ce986ae7-1b4d-4f0d-8f9b-a0b022182124', 
-	gitCredentialsId: 'loginToGit3',
-	gitRepoUrl: 'https://evolve.compuware.com:8443/scm/~kathy.turetzky_compuware.com/ispwgitplaytest.git', 
-	runtimeConfig: 'TPZP', 
-	stream: 'PLAY'
-	*/
-
+  { 	
 	gitToIspwIntegration app: 'TXXX', 
-	branchMapping: '*TXXX* => DEV1, per-branch', 
+	branchMapping: '*TXXX* => DEV3, per-branch', 
 	connectionId: '5520f4ea-7300-4387-aea2-182136258d31', 
 	credentialsId: 'CWEZXXX', 
 	gitCredentialsId: 'de2894bf-c81a-4a4d-af99-18ab5c6f0e3b', 
@@ -30,19 +19,10 @@ node {
 
   stage('Build ISPW assignment')
   {
-	/* Original
-	ispwOperation connectionId: '9079999f-ab78-4047-8366-00eb8aa4f173', 
-	consoleLogResponseBody: true, 
-	credentialsId: 'CES20.1Conn', 
-	ispwAction: 'BuildAssignment', 
-	ispwRequestBody: '''assignmentId=PLAY003145
-	level=DEV1
-	'''
-	*/
-
 	ispwOperation connectionId: '5520f4ea-7300-4387-aea2-182136258d31', 
 	credentialsId: 'CWEZXXX-CES', 
 	ispwAction: 'BuildAssignment', 
-	ispwRequestBody: '''assignmentId=PLAY003145 level=DEV3'''
+	ispwRequestBody: '''assignmentId=PLAY003145 
+	level=DEV3'''
   }
 }
