@@ -18,7 +18,7 @@ ispwApplication:
   - path: \COB
     types:
     - fileExtension: cbl
-      ispwType: WAI
+      ispwType: COB
   - path: \H
     types:
     - fileExtension: h
