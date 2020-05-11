@@ -6,8 +6,8 @@ import groovy.json.JsonBuilder
 import groovy.json.JsonOutput
 import java.net.URL
 
-String ISPW_Application     = "TXXX"
-String HCI_Token            = "CWEZXXX"
+String ISPW_Application     = "TXXX"        // Change to your assigned application
+String HCI_Token            = "CWEZXXX"     // Chnage to your assigned Test Drive ID
 
 node {
   stage ('Checkout') 
