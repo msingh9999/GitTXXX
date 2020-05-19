@@ -19,7 +19,7 @@ node {
   stage('Git to ISPW Synchronization')
   {     
     gitToIspwIntegration app: "${ISPW_Application}", 
-    branchMapping: '*TXXX* => DEV3, per-branch', 
+    branchMapping: '*TXX* => DEV3, per-branch', 
     connectionId: '5520f4ea-7300-4387-aea2-182136258d31', 
     credentialsId: "${HCI_Token}",
     gitCredentialsId: 'de2894bf-c81a-4a4d-af99-18ab5c6f0e3b', 
