@@ -7,7 +7,7 @@ import groovy.json.JsonOutput
 import java.net.URL
 
 String ISPW_Application     = "TXXX"        // Change to your assigned application
-String HCI_Token            = "CWEZXXX"     // Change to your assigned Test Drive ID
+String HCI_Token            = "CWEZXXX"     // Change to your assigned ID
 
 node {
   stage ('Checkout') 
@@ -23,20 +23,27 @@ node {
     TXX1* => QA1, per-branch
     TXX2* => QA2, per-branch
     TXXX* => QA3, per-branch''', 
-    connectionId: '5520f4ea-7300-4387-aea2-182136258d31', 
+    connectionId: '38e854b0-f7d3-4a8f-bf31-2d8bfac3dbd4', // CWC2
     credentialsId: "${HCI_Token}",
-    gitCredentialsId: 'de2894bf-c81a-4a4d-af99-18ab5c6f0e3b', 
-    gitRepoUrl: 'http://192.168.96.156/Bonobo.Git.Server/IspwGitTXXXTest.git', 
-    runtimeConfig: 'isp8', 
+    gitCredentialsId: 'ec3e192a-3e5f-4c5f-bb40-129b63ce6c23', // Manoj
+    gitRepoUrl: 'https://github.com/msingh9999/GitTXXX.git', 
+    runtimeConfig: 'isp8', // CWC2 
+    //runtimeConfig: 'ispw', // CWCC
     stream: 'CWEZ'
   }
 
   stage('Build ISPW assignment')
   { 
-    ispwOperation connectionId: '5520f4ea-7300-4387-aea2-182136258d31', 
+    ispwOperation connectionId: '38e854b0-f7d3-4a8f-bf31-2d8bfac3dbd4', // CWC2
     consoleLogResponseBody: false, 
-    credentialsId: 'CWEZXXX-CES', 
+    credentialsId: 'CWEZXXX-CES', // CWC2
+    //credentialsId: 'PFHMKS0-CES', // CWCC
     ispwAction: 'BuildTask',
     ispwRequestBody: '''buildautomatically = true'''
+  }
+  
+  stage('Deploy')
+  {
+    println "Deploy successfull!"
   }
 }
