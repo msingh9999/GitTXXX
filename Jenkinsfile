@@ -6,42 +6,44 @@ import groovy.json.JsonBuilder
 import groovy.json.JsonOutput
 import java.net.URL
 
-String ISPW_Application     = "TXXX"        // Change to your assigned application
-String HCI_Token            = "CWEZXXX"     // Change to your assigned ID
+String ISPW_Application     = "MKS1"        // Change to your assigned application
+String HCI_Token            = "PFHMKS0"     // Change to your assigned ID
 
 node {
-  stage ('Checkout') 
+  stage ('Checkout')
   {
     // Get the code from the Git repository
     checkout scm
   }
 
   stage('Git to ISPW Synchronization')
-  {     
-    gitToIspwIntegration app: "${ISPW_Application}", 
+  {
+    gitToIspwIntegration app: "${ISPW_Application}",
     branchMapping: '''*master* => STG, per-branch'
     TXX1* => QA1, per-branch
     TXX2* => QA2, per-branch
-    TXXX* => QA3, per-branch''', 
-    connectionId: '38e854b0-f7d3-4a8f-bf31-2d8bfac3dbd4', // CWC2
+    TXXX* => QA3, per-branch''',
+    //connectionId: '38e854b0-f7d3-4a8f-bf31-2d8bfac3dbd4', // CWC2
+    connectionId: '4b4cf589-b835-4579-96ee-2aba6b818125', // TD-CWCC
     credentialsId: "${HCI_Token}",
-    gitCredentialsId: 'ec3e192a-3e5f-4c5f-bb40-129b63ce6c23', // Manoj
-    gitRepoUrl: 'https://github.com/msingh9999/GitTXXX.git', 
-    runtimeConfig: 'isp8', // CWC2 
-    //runtimeConfig: 'ispw', // CWCC
-    stream: 'CWEZ'
+    gitCredentialsId: 'ec3e192a-3e5f-4c5f-bb40-129b63ce6c23', // Mingh9999
+    gitRepoUrl: 'https://github.com/msingh9999/GitTXXX.git',
+    //runtimeConfig: 'isp8', // CWC2
+    runtimeConfig: 'ispw', // CWCC
+    stream: 'FTSDEMO'
   }
 
   stage('Build ISPW assignment')
-  { 
-    ispwOperation connectionId: '38e854b0-f7d3-4a8f-bf31-2d8bfac3dbd4', // CWC2
-    consoleLogResponseBody: false, 
-    credentialsId: 'CWEZXXX-CES', // CWC2
-    //credentialsId: 'PFHMKS0-CES', // CWCC
+  {
+    //ispwOperation connectionId: '38e854b0-f7d3-4a8f-bf31-2d8bfac3dbd4', // CWC2
+    ispwOperation connectionId: '4b4cf589-b835-4579-96ee-2aba6b818125', // TD-CWCC
+    consoleLogResponseBody: false,
+    //credentialsId: 'CWEZXXX-CES', // CWC2
+    credentialsId: 'PFHMKS0-CES', // CWCC
     ispwAction: 'BuildTask',
     ispwRequestBody: '''buildautomatically = true'''
   }
-  
+
   stage('Deploy')
   {
     println "Deploy successfull!"

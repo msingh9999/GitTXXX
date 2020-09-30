@@ -1,7 +1,7 @@
 !!com.compuware.ispw.cli.model.IspwRoot
 ispwApplication:
-  application: TXXX
-  host: TestDrive
+  application: MKS1
+  host: CWCC
   pathMappings:
   - path: \AMAC
     types:
@@ -52,5 +52,5 @@ ispwApplication:
     - fileExtension: txt
       ispwType: SRPC
   port: 16196
-  runtimeConfig: ISP8
-  stream: CWEZ
+  runtimeConfig: ISPW
+  stream: FTSDEMO
