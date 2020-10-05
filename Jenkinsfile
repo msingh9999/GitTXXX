@@ -20,6 +20,7 @@ node {
   {
     gitToIspwIntegration app: "${ISPW_Application}",
     branchMapping: '''*master* => STG, per-branch'
+    bug* => EMR, per-branch
     feature1* => QA1, per-branch
     feature2* => QA2, per-branch
     feature3* => QA3, per-branch''',
@@ -59,13 +60,13 @@ node {
   stage('Retrieve Code Coverage')
   {
     sleep(10)
-    println "TTT Tests successfull!"
+    println "Retrieve code successfull!"
   }
 
   stage('Run Sonar Analysis')
   {
     sleep(10)
-    println "TTT Tests successfull!"
+    println "Sonar analysis successfull!"
   }
 
 
