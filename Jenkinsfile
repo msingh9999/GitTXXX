@@ -14,7 +14,7 @@ node {
   {
     // Get the code from the Git repository
     //checkout scm
-    git branch: 'feature1-MKS2', credentialsId: '6e21e79c-caf5-4298-9f47-344d72236885', url: 'https://github.com/msingh9999/GitTXXX.git'
+    git branch: 'master', credentialsId: '6e21e79c-caf5-4298-9f47-344d72236885', url: 'https://github.com/msingh9999/GitTXXX.git'
   }
 
   stage('Git to ISPW Synchronization')
