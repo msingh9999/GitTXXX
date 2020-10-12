@@ -13,8 +13,7 @@ node {
   stage ('Checkout')
   {
     // Get the code from the Git repository
-    //checkout scm
-    git branch: 'master', credentialsId: '6e21e79c-caf5-4298-9f47-344d72236885', url: 'https://github.com/msingh9999/GitTXXX.git'
+    checkout scm
   }
 
   stage('Git to ISPW Synchronization')
@@ -48,7 +47,7 @@ node {
 
   stage('Deploy to Testing')
   {
-    sleep(10)
+    sleep(7)
     println "Deploy successfull!"
   }
 
@@ -60,13 +59,13 @@ node {
 
   stage('Retrieve Code Coverage')
   {
-    sleep(10)
+    sleep(5)
     println "Retrieve code successfull!"
   }
 
   stage('Run Sonar Analysis')
   {
-    sleep(10)
+    sleep(12)
     println "Sonar analysis successfull!"
   }
 
