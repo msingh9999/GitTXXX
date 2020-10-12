@@ -6,10 +6,14 @@
 000600
 000700********************************************************
 <<<<<<< Upstream, based on origin/master
+<<<<<<< Upstream, based on origin/master
 000800* THIS PROGRAM IS A TRAINING PROGRAM-MKS
 =======
 000800* THIS PROGRAM IS A TRAINING PROGRAM-MKS1
 >>>>>>> 7bc56f2 Change 1
+=======
+000800* THIS PROGRAM IS A TRAINING PROGRAM-MKS11
+>>>>>>> bbf1514 Change 1
 000900*      WITH A LINK TO TSUBR01
 001000*
 001100*      AND COPYLIBS   TCPYA01   (HEADER)
