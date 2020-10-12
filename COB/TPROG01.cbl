@@ -8,6 +8,7 @@
 <<<<<<< Upstream, based on origin/master
 <<<<<<< Upstream, based on origin/master
 <<<<<<< Upstream, based on origin/master
+<<<<<<< Upstream, based on origin/master
 000800* THIS PROGRAM IS A TRAINING PROGRAM-MKS
 =======
 000800* THIS PROGRAM IS A TRAINING PROGRAM-MKS1
@@ -18,6 +19,9 @@
 =======
 000800* THIS PROGRAM IS A TRAINING PROGRAM-MKS1
 >>>>>>> 4ac669c make MKS1 change
+=======
+000800* THIS PROGRAM IS A TRAINING PROGRAM-MKS11
+>>>>>>> edb5467 Changed to MKS11
 000900*      WITH A LINK TO TSUBR01
 001000*
 001100*      AND COPYLIBS   TCPYA01   (HEADER)
