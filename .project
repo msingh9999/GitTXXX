@@ -8,5 +8,6 @@
 	</buildSpec>
 	<natures>
 		<nature>com.compuware.ispw.project.natures.IspwGitProjectNature</nature>
+		<nature>com.compuware.frameworks.hostservices.copybooks.local.localCopybooksNature</nature>
 	</natures>
 </projectDescription>
