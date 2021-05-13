@@ -57,4 +57,4 @@ jobs:
           ces_token: ${{ secrets.CES_TOKEN }}
           srid: 'cwcc-2020'
           runtime_configuration: 'ISPW'
-          generate_automatically: ${{ steps.sync.outputs.automaticBuildJson }}
+          generate_automatically: ${{ steps.sync-local.outputs.automaticBuildJson }}
