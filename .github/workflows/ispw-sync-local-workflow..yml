@@ -44,3 +44,17 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
           winTopazPath: ${{ env.Win_Topaz_Location }}
           showEnv: false
+      # Generate step
+      - name: Get automatic build parameters
+        run: echo "automaticBuildJson=${{ steps.sync.outputs.automaticBuildJson }}"
+      - name: Get changed programs
+        run: echo "changedProgramsJson=${{ steps.sync.outputs.changedProgramsJson }}"
+      - name: Generate
+        uses: bmc-compuware/ispw-generate@main
+        id: generate
+        with:
+          ces_url: 'http://cwcc:2020'
+          ces_token: ${{ secrets.CES_TOKEN }}
+          srid: 'cwcc-2020'
+          runtime_configuration: 'ISPW'
+          generate_automatically: ${{ steps.sync.outputs.automaticBuildJson }}
