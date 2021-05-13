@@ -28,7 +28,7 @@ jobs:
      
       # sync step 2
       - name: Sync step
-        uses: ./actions/ispw-sync-local
+        uses: bmc-compuware/ispw-sync-local@1.0.0
         id: sync-local
         with:
           host: 'cwcc.compuware.com'
