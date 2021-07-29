@@ -1,5 +1,5 @@
 eclipse.preferences.version=1
 ispwEditing=TRUE
-ispwGitAssignDesc=${user}-${project_name}
-ispwMappingLevel=DEV2
+ispwGitAssignDesc=source from GitTXXX
+ispwMappingLevel=DEV1
 ispwYamlConfigPath=D\:/PhotonUser/git/GitTXXX/ispwconfig.yml
