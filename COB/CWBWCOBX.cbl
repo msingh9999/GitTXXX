@@ -670,15 +670,3 @@
            CLOSE EMPLOYEE-FILE.
            CLOSE REPORT-FILE.
 *********
-*********
-       9999-RIP.
-           DISPLAY '    ************    '.
-           DISPLAY '   *            *   '.
-           DISPLAY '  *   T H I S    *  '.
-           DISPLAY ' *                * '.
-           DISPLAY ' *      I S       * '.
-           DISPLAY ' *                * '.
-           DISPLAY ' *    D E A D     * '.
-           DISPLAY ' *                * '.
-           DISPLAY ' *    C O D E     * '.
-           DISPLAY ' ****************** '.
