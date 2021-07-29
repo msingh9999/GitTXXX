@@ -5,7 +5,7 @@
       ******      C O M P U W A R E   C O R P O R A T I O N       ******
       *                                                                *
       *  THIS PROGRAM IS A QSAM COBOL DEMO PROGRAM USED FOR            *
-      *  TOPAZ FOR TOTAL TEST TRAINING SESSIONS.                       *
+      *  TOPAZ FOR TOTAL TEST TRAINING SESSIONS. DEAD CODE             *
       *                                                                *
       *  INPUT FILE  - EMPLOYEE WAGE INFORMATION                       *
       *              - STORED IN THE ECC SLCXCNTL FILE - TTTDATH       *
