@@ -38,7 +38,7 @@ jobs:
           runtimeConfiguration: 'ISPW'
           stream: 'FTSDEMO'
           application: 'MKS1'
-          checkoutLevel: 'DEV1'
+          checkoutLevel: 'QA1'
           gitUid: 'manosing'
           gitPass: ${{ secrets.GIT_USER1_PWD }}
           token: ${{ secrets.GH_TOKEN }}
