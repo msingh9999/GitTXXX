@@ -19,7 +19,7 @@ jobs:
     # if need this 
     env:
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      Win_Topaz_Location: 'C:\TWB-20.08.01\CLI'
+      Win_Topaz_Location: 'C:\TWB-20.09.01\CLI'
     steps:
       - name: Checkout
         uses: actions/checkout@v2
