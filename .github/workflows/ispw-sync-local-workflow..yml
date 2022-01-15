@@ -15,7 +15,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: [self-hosted, manosingh-GitTXXX.AM-MANOSING-W3]
+    runs-on: [self-hosted, singhrunner]
     # if need this 
     env:
       GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
