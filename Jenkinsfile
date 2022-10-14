@@ -36,13 +36,17 @@ node {
 
   stage('Build ISPW assignment')
   {
-    //ispwOperation connectionId: '38e854b0-f7d3-4a8f-bf31-2d8bfac3dbd4', // CWC2
-    ispwOperation connectionId: '4b4cf589-b835-4579-96ee-2aba6b818125', // TD-CWCC
-    consoleLogResponseBody: false,
-    //credentialsId: 'CWEZXXX-CES', // CWC2
-    credentialsId: 'PFHMKS0-CES', // CWCC
-    ispwAction: 'BuildTask',
-    ispwRequestBody: '''buildautomatically = true'''
+    try {
+        //ispwOperation connectionId: '38e854b0-f7d3-4a8f-bf31-2d8bfac3dbd4', // CWC2
+        ispwOperation connectionId: '4b4cf589-b835-4579-96ee-2aba6b818125', // TD-CWCC
+        consoleLogResponseBody: false,
+        //credentialsId: 'CWEZXXX-CES', // CWC2
+        credentialsId: 'PFHMKS0-CES', // CWCC
+        ispwAction: 'BuildTask',
+        ispwRequestBody: '''buildautomatically = true'''
+    } catch (Exception e) {
+      // do something
+    }
   }
 
   stage('Deploy to Testing')
