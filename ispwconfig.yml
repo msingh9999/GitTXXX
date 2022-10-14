@@ -1,7 +1,7 @@
 !!com.compuware.ispw.cli.model.IspwRoot
 ispwApplication:
   application: MKS1
-  host: CWCC
+  host: CWCC.bmc.com
   pathMappings:
   - path: \AMAC
     types:
