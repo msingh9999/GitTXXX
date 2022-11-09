@@ -31,7 +31,7 @@ jobs:
         uses: bmc-compuware/ispw-sync-local@1.0.0
         id: sync-local
         with:
-          host: 'cwcc.compuware.com'
+          host: 'cwcc.bmc.com'
           port: 16196
           uid: 'PFHMKS0'
           pass: ${{ secrets.TSO_TOKEN }}
@@ -53,7 +53,7 @@ jobs:
         uses: bmc-compuware/ispw-generate@main
         id: generate
         with:
-          ces_url: 'http://cwcc:2020'
+          ces_url: 'http://aus-bdc-cwcc.bmc.com:2020'
           ces_token: ${{ secrets.CES_TOKEN }}
           srid: 'cwcc-2020'
           runtime_configuration: 'ISPW'
