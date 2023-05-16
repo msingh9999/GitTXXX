@@ -35,7 +35,7 @@ jobs:
           port: 16196
           uid: 'PFHMKS0'
           pass: ${{ secrets.TSO_TOKEN }}
-          runtimeConfiguration: 'ISPW'
+          runtimeConfiguration: 'ICCGA'
           stream: 'FTSDEMO'
           application: 'MKS1'
           checkoutLevel: 'QA1'
@@ -56,5 +56,5 @@ jobs:
           ces_url: 'http://aus-bdc-cwcc.bmc.com:2020'
           ces_token: ${{ secrets.CES_TOKEN }}
           srid: 'cwcc-2020'
-          runtime_configuration: 'ISPW'
+          runtime_configuration: 'ICCGA'
           generate_automatically: ${{ steps.sync-local.outputs.automaticBuildJson }}
