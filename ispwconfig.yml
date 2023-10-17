@@ -52,5 +52,5 @@ ispwApplication:
     - fileExtension: txt
       ispwType: SRPC
   port: 16196
-  runtimeConfig: ISPW
+  runtimeConfig: ICCGA
   stream: FTSDEMO
